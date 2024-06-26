@@ -1,7 +1,16 @@
+import columnStyles from "@/styles/columnStyles.module.css"
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Mr. Clean
-    </main>
+    <>
+      <div className={`col-span-2 ${columnStyles["first-layer-column"]}`}>
+        Olha
+      </div>
+      <div className={`col-span-8 ${columnStyles["first-layer-column"]}`}>
+        A
+      </div>
+      <div className={`col-span-2 ${columnStyles["first-layer-column"]}`}>
+        Bomba
+      </div>
+    </>
   )
 }

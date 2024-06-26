@@ -1,0 +1,5 @@
+.first-layer-column {
+  @apply p-4 rounded-md;
+  @apply shadow-lg shadow-amber-500/50 bg-amber-500;
+  @apply border border-solid border-amber-600 border-b-amber-300 border-r-amber-300;
+}

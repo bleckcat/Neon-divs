@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Roboto } from "next/font/google"
+import "./globals.css"
 
 const inter = Roboto({
   subsets: ["latin"],
@@ -18,7 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <main className="grid grid-cols-12 gap-4 min-h-screen items-start justify-between bg-stone-900 pt-16 px-32">
+          {children}
+        </main>
+      </body>
     </html>
   )
 }

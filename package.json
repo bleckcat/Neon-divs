@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write './{components,app}/**/*.{ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write './{components,app,styles}/**/*.{ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "dependencies": {
     "react": "^18",

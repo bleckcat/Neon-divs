@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  text-rendering: optimizeLegibility;
+  @apply text-stone-950;
+}
