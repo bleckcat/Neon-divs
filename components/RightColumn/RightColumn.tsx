@@ -1,12 +1,11 @@
 import React from "react"
+import GlowingContainer from "../GlowingContainer/GlowingContainer"
 
 const RightColumn = () => {
   return (
-    <div
-      className={`self-stretch w-64 p-4 border border-transparent border-l-amber-400/50`}
-    >
-      Right
-    </div>
+    <GlowingContainer>
+      <div className={`self-stretch w-64 p-4`}>Right</div>
+    </GlowingContainer>
   )
 }
 

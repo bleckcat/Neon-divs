@@ -34,7 +34,9 @@ const GlowingContainer: React.FC<Props> = ({ children }) => {
       centerX *= -1
     }
 
-    setMouseNearCenter(Math.round((centerX + centerY) / 2))
+    setMouseNearCenter(
+      Math.min(Math.max(Math.round((centerX + centerY) / 2), 20), 50)
+    )
 
     setRenderElementCopy(true)
     setMousePosition({
@@ -42,6 +44,7 @@ const GlowingContainer: React.FC<Props> = ({ children }) => {
       y: event.nativeEvent.layerY
     })
   }
+
   const handleMouseLeave = () => {
     setRenderElementCopy(false)
   }
@@ -53,7 +56,7 @@ const GlowingContainer: React.FC<Props> = ({ children }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div
-        className={`group transition-all bg-zinc-900/50 border-2 border-white/5 rounded-md p-4 shadow-lg shadow-black/80 backdrop-blur-md`}
+        className={`group transition-all bg-zinc-900/50 border-2 border-white/5 rounded-md p-4 shadow-lg shadow-black/80 backdrop-blur-md backdrop-blur-sm`}
       >
         {children}
       </div>
@@ -65,7 +68,7 @@ const GlowingContainer: React.FC<Props> = ({ children }) => {
           }}
         >
           <div
-            className={`transition-all bg-amber-500/20 text-amber-500 text-opacity-50 border-2 border-amber-500 rounded-md p-4 shadow-inner shadow-amber-500`}
+            className={`transition-all bg-gradient-to-r from-amber-500/10 to-orange-500/10 border-2 border-amber-500 rounded-md p-4 shadow-inner shadow-amber-500`}
           >
             {children}
           </div>

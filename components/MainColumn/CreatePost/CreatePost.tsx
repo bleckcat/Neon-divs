@@ -15,9 +15,15 @@ const CreatePost = () => {
       />
       <div className="flex justify-between">
         <div className="flex gap-2">
-          <p className="p-2 bg-zinc-800 text-zinc-400 rounded-full">#Algo</p>
-          <p className="p-2 bg-zinc-800 text-zinc-400 rounded-full">#teste</p>
-          <p className="p-2 bg-zinc-800 text-zinc-400 rounded-full">#mock</p>
+          <div className="p-2 bg-zinc-800 text-zinc-400 rounded-full">
+            <p>#Algo</p>
+          </div>
+          <div className="p-2 bg-zinc-800 text-zinc-400 rounded-full">
+            <p>#teste</p>
+          </div>
+          <div className="p-2 bg-zinc-800 text-zinc-400 rounded-full">
+            <p>#mock</p>
+          </div>
         </div>
         <button
           type="submit"
