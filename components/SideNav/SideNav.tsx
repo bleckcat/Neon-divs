@@ -6,7 +6,7 @@ import GlowingContainer from "../GlowingContainer"
 
 const SideNav = () => {
   return (
-    <GlowingContainer>
+    <GlowingContainer className="border-b-2 border-r-2 border-l-2 border-white/5">
       <nav className={`w-64 p-4`}>
         <div className="flex">
           <Image

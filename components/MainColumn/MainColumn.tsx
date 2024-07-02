@@ -4,15 +4,15 @@ import GlowingContainer from "../GlowingContainer"
 
 const MainColumn = () => {
   return (
-    <div className={`w-[720px] mx-8`}>
-      <GlowingContainer>
-        <div className="flex justify-around border border-transparent border-b-amber-400/50">
-          <button className="p-2 w-40 font-bold border border-transparent border-b-2 border-b-amber-500">
-            Aba 1
-          </button>
+    <div className={`w-[720px]`}>
+      <GlowingContainer className="border-b-2 border-r-2 border-l-2 border-white/5 mx-4 mb-4">
+        <div className="flex justify-around">
+          <button className="p-2 w-40 font-bold">Aba 1</button>
           <button className="p-2 w-40 font-bold">Aba 2</button>
         </div>
-        <div className="px-4 border border-transparent border-b-amber-400/50">
+      </GlowingContainer>
+      <GlowingContainer className="mx-4 border-2 border-white/5">
+        <div className="px-4">
           <div className={`mb-4`}>
             <CreatePost />
           </div>

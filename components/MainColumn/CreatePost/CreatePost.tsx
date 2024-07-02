@@ -27,7 +27,7 @@ const CreatePost = () => {
         </div>
         <button
           type="submit"
-          className="px-4 py-2 transition-all bg-amber-500 hover:bg-amber-600 rounded-full"
+          className="px-4 py-2 text-zinc-950 transition-all bg-amber-500 hover:bg-amber-600 rounded-full"
         >
           Enviar
         </button>

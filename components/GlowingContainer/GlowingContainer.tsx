@@ -3,9 +3,10 @@ import React, { MouseEvent, useState } from "react"
 import styles from "./glowingConteiner.module.css"
 interface Props {
   children: React.ReactNode
+  className?: React.ComponentProps<"div">["className"]
 }
 
-const GlowingContainer: React.FC<Props> = ({ children }) => {
+const GlowingContainer: React.FC<Props> = ({ children, className }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [renderElementCopy, setRenderElementCopy] = useState(false)
   const [mouseNearCenter, setMouseNearCenter] = useState(0)
@@ -56,7 +57,7 @@ const GlowingContainer: React.FC<Props> = ({ children }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div
-        className={`group transition-all bg-zinc-900/60 border-2 border-white/5 rounded-md p-4 shadow-lg shadow-black/80`}
+        className={`${className} group transition-all bg-zinc-900/60 p-4 shadow-lg shadow-black/80`}
       >
         {children}
       </div>
@@ -68,7 +69,7 @@ const GlowingContainer: React.FC<Props> = ({ children }) => {
           }}
         >
           <div
-            className={`transition-all bg-gradient-to-r from-amber-500/10 to-orange-500/10 border-2 border-amber-500 rounded-md p-4 shadow-inner shadow-amber-500 text-white`}
+            className={`[&>*.border-b-2]:!border-amber-500 [&>*.border-t-2]:!border-amber-500 [&>*.border-l-2]:!border-amber-500 [&>*.border-r-2]:!border-amber-500 [&>*.border-2]:!border-amber-500 !border-amber-500 ${className} transition-all bg-gradient-to-r from-amber-500/10 to-orange-500/10 p-4 shadow-inner shadow-amber-500 text-white`}
           >
             {children}
           </div>
