@@ -57,7 +57,7 @@ const GlowingContainer: React.FC<Props> = ({ children, className }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div
-        className={`${className} group transition-all bg-zinc-900/60 p-4 shadow-lg shadow-black/80`}
+        className={`${className} group transition-all bg-zinc-900/60 shadow-lg shadow-black/80`}
       >
         {children}
       </div>
@@ -69,7 +69,7 @@ const GlowingContainer: React.FC<Props> = ({ children, className }) => {
           }}
         >
           <div
-            className={`[&>*.border-b-2]:!border-amber-500 [&>*.border-t-2]:!border-amber-500 [&>*.border-l-2]:!border-amber-500 [&>*.border-r-2]:!border-amber-500 [&>*.border-2]:!border-amber-500 !border-amber-500 ${className} transition-all bg-gradient-to-r from-amber-500/10 to-orange-500/10 p-4 shadow-inner shadow-amber-500 text-white`}
+            className={`[&>*.border-b-2]:!border-amber-500 [&>*.border-t-2]:!border-amber-500 [&>*.border-l-2]:!border-amber-500 [&>*.border-r-2]:!border-amber-500 [&>*.border-2]:!border-amber-500 !border-amber-500 ${className} transition-all bg-gradient-to-r from-amber-500/10 to-orange-500/10 shadow-inner shadow-amber-500 text-white`}
           >
             {children}
           </div>
