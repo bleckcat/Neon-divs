@@ -1,0 +1,8 @@
+.glow-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  user-select: none;
+  transition: 400ms mask ease;
+  will-change: mask;
+}

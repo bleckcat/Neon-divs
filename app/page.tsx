@@ -1,11 +1,11 @@
-import LeftColumn from "@/components/LeftColumn"
+import SideNav from "@/components/SideNav"
 import MainColumn from "@/components/MainColumn"
 import RightColumn from "@/components/RightColumn"
 
 export default function Home() {
   return (
     <>
-      <LeftColumn />
+      <SideNav />
       <MainColumn />
       <RightColumn />
     </>

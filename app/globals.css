@@ -4,5 +4,19 @@
 
 :root {
   text-rendering: optimizeLegibility;
-  @apply text-stone-950;
+  @apply text-zinc-100;
+}
+
+*:focus {
+  outline: none;
+}
+
+textarea,
+input {
+  @apply focus:outline focus:outline-offset-2 focus:outline-2 focus:outline-amber-500;
+  @apply bg-zinc-700 rounded-sm p-2 text-zinc-200 placeholder:text-zinc-400 transition-all;
+}
+
+textarea {
+  @apply resize-none;
 }
