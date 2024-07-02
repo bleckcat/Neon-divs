@@ -2,7 +2,7 @@ import React from "react"
 import Image from "next/image"
 import commonStyles from "@/styles/commonStyles.module.css"
 import Link from "next/link"
-import GlowingContainer from "../GlowingContainer/GlowingContainer"
+import GlowingContainer from "../GlowingContainer"
 
 const SideNav = () => {
   return (

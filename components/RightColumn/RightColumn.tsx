@@ -1,5 +1,5 @@
 import React from "react"
-import GlowingContainer from "../GlowingContainer/GlowingContainer"
+import GlowingContainer from "../GlowingContainer"
 
 const RightColumn = () => {
   return (

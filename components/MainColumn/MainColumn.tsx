@@ -1,6 +1,6 @@
 import React from "react"
 import CreatePost from "./CreatePost"
-import GlowingContainer from "../GlowingContainer/GlowingContainer"
+import GlowingContainer from "../GlowingContainer"
 
 const MainColumn = () => {
   return (
