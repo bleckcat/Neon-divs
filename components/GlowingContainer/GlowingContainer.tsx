@@ -1,5 +1,5 @@
 "use client"
-import React, { MouseEvent, useState } from "react"
+import React, { MouseEvent, useRef, useState } from "react"
 import styles from "./glowingConteiner.module.css"
 interface Props {
   children: React.ReactNode
@@ -69,10 +69,8 @@ const GlowingContainer: React.FC<Props> = ({ children, className }) => {
           }}
         >
           <div
-            className={`[&>*.border-b-2]:!border-amber-500 [&>*.border-t-2]:!border-amber-500 [&>*.border-l-2]:!border-amber-500 [&>*.border-r-2]:!border-amber-500 [&>*.border-2]:!border-amber-500 !border-amber-500 ${className} transition-all bg-gradient-to-r from-amber-500/10 to-orange-500/10 shadow-inner shadow-amber-500 text-white`}
-          >
-            {children}
-          </div>
+            className={`[&>*.border-b-2]:!border-amber-500 [&>*.border-t-2]:!border-amber-500 [&>*.border-l-2]:!border-amber-500 [&>*.border-r-2]:!border-amber-500 [&>*.border-2]:!border-amber-500 [&>form]:!invisible !border-amber-500 ${className} transition-all bg-gradient-to-r from-amber-500/10 to-orange-500/10 shadow-inner shadow-amber-500 text-white h-full`}
+          />
         </div>
       )}
     </div>

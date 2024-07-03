@@ -1,18 +1,28 @@
-"use client"
-import Image from "next/image"
-import React, { useState } from "react"
-import commonStyles from "@/styles/commonStyles.module.css"
+import React from "react"
 
 interface UserInputAttr {
-  text: string
-  images: string[]
-  timeStamp: string
+  text: FormDataEntryValue | null
+  images?: FormDataEntryValue | null
+  tags?: FormDataEntryValue | null
+  timeStamp?: number
 }
 
 const CreatePost = () => {
-  const [userInputs, setUserInputs] = useState<UserInputAttr>()
+  async function createInvoice(formData: FormData) {
+    "use server"
+
+    const rawFormData: UserInputAttr = {
+      text: formData.get("postText"),
+      images: formData.get("images"),
+      tags: formData.get("tags"),
+      timeStamp: Date.now()
+    }
+
+    console.log(rawFormData)
+  }
+
   return (
-    <form action="api/submitPost" className="m-2">
+    <form action={createInvoice} className="m-2">
       <textarea
         aria-label="Criar post"
         name="postText"
@@ -23,15 +33,20 @@ const CreatePost = () => {
       />
       <div className="flex justify-between">
         <div className="flex gap-2">
-          <div className="p-2 bg-zinc-800 text-zinc-400 rounded-full">
-            <p>#Algo</p>
-          </div>
-          <div className="p-2 bg-zinc-800 text-zinc-400 rounded-full">
-            <p>#teste</p>
-          </div>
-          <div className="p-2 bg-zinc-800 text-zinc-400 rounded-full">
-            <p>#mock</p>
-          </div>
+          <input
+            name="tags"
+            type="text"
+            className="p-2 bg-zinc-800 text-zinc-400 rounded-full w-fit cursor-pointer"
+            readOnly
+            value="#newTag"
+          />
+          <input
+            name="tags"
+            type="text"
+            className="p-2 bg-zinc-800 text-zinc-400 rounded-full w-fit cursor-pointer"
+            readOnly
+            value="#newTag"
+          />
         </div>
         <button
           type="submit"
