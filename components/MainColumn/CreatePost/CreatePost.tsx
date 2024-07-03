@@ -1,8 +1,16 @@
+"use client"
 import Image from "next/image"
-import React from "react"
+import React, { useState } from "react"
 import commonStyles from "@/styles/commonStyles.module.css"
 
+interface UserInputAttr {
+  text: string
+  images: string[]
+  timeStamp: string
+}
+
 const CreatePost = () => {
+  const [userInputs, setUserInputs] = useState<UserInputAttr>()
   return (
     <form action="api/submitPost" className="m-2">
       <textarea

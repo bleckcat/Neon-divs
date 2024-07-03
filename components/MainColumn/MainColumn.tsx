@@ -17,7 +17,6 @@ const MainColumn = () => {
             <CreatePost />
           </div>
         </div>
-        <div className={``}>Feed</div>
       </GlowingContainer>
     </div>
   )

@@ -1,6 +1,5 @@
 import React from "react"
 import Image from "next/image"
-import commonStyles from "@/styles/commonStyles.module.css"
 import Link from "next/link"
 import GlowingContainer from "../GlowingContainer"
 
@@ -16,7 +15,7 @@ const SideNav = () => {
             alt="Avatar"
             width={52}
             height={52}
-            className={`${commonStyles["cool-border"]} p-1 rounded-full h-fit`}
+            className={`p-1 rounded-full h-fit border-2 border-amber-500/30`}
           />
           <div className="px-4 flex flex-col">
             <p className="leading-none">Nome do usuario</p>
